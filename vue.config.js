@@ -15,5 +15,12 @@ module.exports = {
   devServer: {
     host: 'localhost',
     port: 10000,
+    proxy: {
+      '/employInfo': {
+        target: 'http://portal.annwayart.com:3000',
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
 }

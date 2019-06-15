@@ -8,6 +8,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import { testAPI } from '@/api/globalApi'
 
 export default {
   name: 'Home',
@@ -18,6 +19,11 @@ export default {
     return {
       msg: this.$t('global.webTitle'),
     }
+  },
+  mounted() {
+    testAPI().then((res) => {
+      console.log(res)
+    })
   },
 }
 </script>
