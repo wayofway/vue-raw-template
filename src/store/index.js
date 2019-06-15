@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import global from '@/store/modules/global'
+import getters from './getters'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
+const store = new Vuex.Store({
+  modules: {
+    global,
+  },
+  getters,
 })
+
+export default store
