@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 
-export function testAPI() {
+export function mockApi() {
   return request({
-    url: '/employInfo',
+    url: '/mock/test',
     method: 'get',
   })
 }

@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import i18n from './locale'
 import '@/styles/index.scss' // global css
+require('@/mock') // mock data
 
 Vue.config.productionTip = false
 
